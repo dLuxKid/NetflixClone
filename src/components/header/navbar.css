@@ -1,0 +1,77 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  justify-content: space-between;
+  z-index: 999;
+  transition: all 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.logo {
+  color: white;
+  position: fixed;
+  left: 3rem;
+  width: 100px;
+  font-size: 1.5rem;
+  padding: 0;
+}
+
+.signin-signup {
+  font-size: 1.2rem;
+  background: darkblue;
+  padding: 7px 20px;
+  border-radius: 5px;
+  color: white;
+  position: fixed;
+  right: 3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav {
+    padding: 1rem;
+    height: 3.5rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    left: 2rem;
+  }
+
+  .signin-signup {
+    font-size: 1rem;
+    padding: 5px 15px;
+    right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 586px) {
+  .logo,
+  .signin-signup {
+    font-size: 1rem;
+  }
+
+  .nav {
+    height: 3rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .logo {
+    font-size: 0.8rem;
+    left: 1rem;
+  }
+
+  .signin-signup {
+    font-size: 0.8rem;
+    right: 1rem;
+  }
+}
