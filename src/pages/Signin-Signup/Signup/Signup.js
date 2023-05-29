@@ -1,9 +1,6 @@
 import React from "react";
 import useForm from "../../../components/Form/Form";
-import {
-  createUserWithEmailAndPassword,
-  updateCurrentUser,
-} from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import "../SignIn/SignIn.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -22,12 +19,16 @@ const Signup = () => {
       auth,
       values.email,
       values.password,
-      values.name
+      values.name,
+      values.phonenumber
     )
       .then((userCredential) => {
         const user = userCredential.user;
-        updateCurrentUser(auth.currentUser, { displayName: values.name });
-        dispatch(authActions.signIn(user));
+        updateProfile(auth.currentUser, {
+          displayName: values.name,
+          phoneNumber: values.phonenumber,
+        });
+        dispatch(authActions.logIn(user));
         Navigate("/");
       })
       .catch((error) => {
@@ -39,7 +40,7 @@ const Signup = () => {
 
   return (
     <main className="main">
-      <form className="form " onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <div>
           <h1 className="signin">Sign Up</h1>
         </div>
@@ -80,8 +81,8 @@ const Signup = () => {
           <input
             type="text"
             id="confirm-password"
-            name="confirm-password"
-            value={values.password || ""}
+            name="confirmPassword"
+            value={values.confirmPassword || ""}
             onChange={handleChange}
             placeholder="confirm password"
           />
