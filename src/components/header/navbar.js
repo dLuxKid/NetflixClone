@@ -6,37 +6,36 @@ import { authActions } from "../../store/authSlice/authSlice";
 import "./navbar.css";
 
 const Navbar = () => {
-	const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-	const LoggedIn = useSelector((state) => state.auth.isLoggedIn);
+  const user = useSelector((state) => state.auth.user);
 
-	const signOutHandler = () => {
-		// const auth = getAuth();
-		dispatch(authActions.logOut());
-	};
+  const signOutHandler = () => {
+    dispatch(authActions.logOut());
+  };
 
-	return (
-		<nav className={`nav`}>
-			<Link
-				to='/'
-				className={`logo`}
-				style={{
-					textDecoration: "none",
-				}}
-			>
-				dLuxKidtv
-			</Link>
-			{!LoggedIn ? (
-				<Link to='/signin' className={`signin-signup`}>
-					SignIn
-				</Link>
-			) : (
-				<Link to='/' className={`signin-signup`} onClick={signOutHandler}>
-					SignOut
-				</Link>
-			)}
-		</nav>
-	);
+  return (
+    <nav className={`nav`}>
+      <Link
+        to="/"
+        className={`logo`}
+        style={{
+          textDecoration: "none",
+        }}
+      >
+        dLuxKidtv
+      </Link>
+      {!user?.uid ? (
+        <Link to="/signin" className={`signin-signup`}>
+          Sign In
+        </Link>
+      ) : (
+        <Link to="/" className={`signin-signup`} onClick={signOutHandler}>
+          Sign Out
+        </Link>
+      )}
+    </nav>
+  );
 };
 
 export default Navbar;
