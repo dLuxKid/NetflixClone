@@ -1,4 +1,4 @@
-# VIEWON YOUR BROWSER
+# VIEW ON YOUR BROWSER
 dluxkidtv.vercel.app
 
 # Getting Started with Create React App
