@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import useForm from "../../../components/Form/Form";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import "./SignIn.css";
@@ -10,21 +10,25 @@ import { auth } from "../../../components/firebase/firebase.utils";
 
 const SignIn = () => {
   const [values, handleChange] = useForm();
+  const [pending, setPending] = useState(null);
   const Navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
+    setPending(true);
     e.preventDefault();
     signInWithEmailAndPassword(auth, values.email, values.password)
       .then((userCredential) => {
         const user = userCredential.user;
         dispatch(authActions.logIn(user));
+        setPending(null);
         Navigate("/");
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorMessage, errorCode);
+        alert(errorMessage, errorCode);
+        setPending(null);
       });
   };
 
@@ -54,9 +58,15 @@ const SignIn = () => {
           />
         </div>
         <div style={{ marginTop: "1rem" }}>
-          <button onClick={handleSubmit} className="sign-btn" type="submit">
-            Log In
-          </button>
+          {pending ? (
+            <button disabled className="sign-btn">
+              Loading...
+            </button>
+          ) : (
+            <button onClick={handleSubmit} className="sign-btn" type="submit">
+              Log In
+            </button>
+          )}
           <span className="signup-signin-text">
             Don't have an account?{" "}
             <Link

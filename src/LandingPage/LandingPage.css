@@ -1,378 +1,379 @@
 .bg {
-	background-image: url(../assets/FZ4e_BlWAAc-a5G.jpeg);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 100vh;
+  background-image: url(../assets/FZ4e_BlWAAc-a5G.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .getStarted_section {
-	height: 100vh;
-	background: rgba(0, 0, 0, 0.3);
-	text-align: center;
-	margin: 0 auto;
-	color: #fff;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 1.8rem;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.8rem;
 }
 
 .getStarted_section h1 {
-	font-weight: 700;
-	font-size: 4rem;
-	line-height: 70px;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 70px;
 }
 
 .getStarted_section h3 {
-	font-weight: 400;
-	font-size: 2.5rem;
+  font-weight: 400;
+  font-size: 2.5rem;
 }
 
 .getStarted_section p {
-	font-weight: 400;
-	font-size: 1.5rem;
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 
 .getStarted_input {
-	height: 70px;
-	display: flex;
-	align-items: center;
-	min-width: 250px;
-	margin: 0 auto;
-	width: 50%;
+  background: transparent;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  min-width: 250px;
+  margin: 0 auto;
+  width: 50%;
 }
 
 .getStarted_input input {
-	background: transparent;
-	border-radius: 0;
-	outline: none;
-	width: 100%;
-	background: ivory;
-	border: 2px solid grey;
-	height: 100%;
+  background: none;
+  border-radius: 0;
+  outline: none;
+  width: 100%;
+  background: ivory;
+  border: 2px solid grey;
+  height: 100%;
 }
 
 .getStarted_input button {
-	background: red;
-	border: none;
-	outline: none;
-	height: 100%;
-	width: 350px;
-	color: #fff;
-	cursor: pointer;
-	font-size: 1.5rem;
-	font-weight: 400;
+  background: red;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 350px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .getStarted_input input::placeholder {
-	color: grey;
-	font-weight: 400;
-	font-size: 1.2rem;
+  color: grey;
+  font-weight: 400;
+  font-size: 1.2rem;
 }
 
 .features_section {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 5% 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 10%;
 }
 
 .features_text {
-	width: 50%;
-	color: #fff;
+  width: 50%;
+  color: #fff;
 }
 
 .features_text h1 {
-	font-size: 3.5rem;
-	font-weight: 700;
-	line-height: 70px;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 70px;
 }
 
 .features_text p {
-	font-size: 2rem;
-	font-weight: 400;
-	line-height: 40px;
-	margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 40px;
+  margin-top: 20px;
 }
 
 .features_img {
-	width: 35%;
+  width: 35%;
 }
 
 .features_img img {
-	width: 100%;
+  width: 100%;
 }
 
 .faq_section {
-	padding: 5% 20%;
-	color: white;
+  padding: 5% 20%;
+  color: white;
 }
 
 .faq_section h1 {
-	font-size: 3.5rem;
-	line-height: 50px;
-	font-weight: 700;
-	text-align: center;
-	padding: 30px;
+  font-size: 3.5rem;
+  line-height: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding: 30px;
 }
 
 .faq {
-	display: flex;
-	margin: 10px 0;
-	flex-direction: column;
+  display: flex;
+  margin: 10px 0;
+  flex-direction: column;
 }
 
 .faq_header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background: grey;
-	padding: 1rem 1.5rem;
-	margin-bottom: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: grey;
+  padding: 1rem 1.5rem;
+  margin-bottom: 3px;
 }
 
 .faq_header h2 {
-	font-size: 2rem;
-	line-height: 50px;
-	font-weight: 600;
+  font-size: 2rem;
+  line-height: 50px;
+  font-weight: 600;
 }
 
 .faq_header span {
-	font-size: 2rem;
-	cursor: pointer;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .faq_text {
-	background: grey;
-	padding: 3rem;
+  background: grey;
+  padding: 3rem;
 }
 
 .active {
-	display: none;
+  display: none;
 }
 
 .faq_text p {
-	font-size: 2rem;
-	font-size: 600;
-	line-height: 40px;
+  font-size: 2rem;
+  font-size: 600;
+  line-height: 40px;
 }
 
 @media only screen and (max-width: 768px) {
-	.getStarted_section {
-		gap: 1.2rem;
-	}
+  .getStarted_section {
+    gap: 1.2rem;
+  }
 
-	.getStarted_section h1 {
-		font-size: 3rem;
-		line-height: 60px;
-	}
+  .getStarted_section h1 {
+    font-size: 3rem;
+    line-height: 60px;
+  }
 
-	.getStarted_section h3 {
-		font-size: 2rem;
-	}
+  .getStarted_section h3 {
+    font-size: 2rem;
+  }
 
-	.getStarted_section p {
-		font-size: 1.2rem;
-	}
+  .getStarted_section p {
+    font-size: 1.2rem;
+  }
 
-	.getStarted_input {
-		height: 50px;
-		width: 70%;
-	}
+  .getStarted_input {
+    height: 50px;
+    width: 70%;
+  }
 
-	.getStarted_input button {
-		font-size: 1.2rem;
-		width: 300px;
-	}
+  .getStarted_input button {
+    font-size: 1.2rem;
+    width: 300px;
+  }
 
-	.getStarted_input input::placeholder {
-		font-size: 1rem;
-	}
+  .getStarted_input input::placeholder {
+    font-size: 1rem;
+  }
 
-	.features_section {
-		flex-direction: column;
-		padding: 10%;
-	}
+  .features_section {
+    flex-direction: column;
+    padding: 10%;
+  }
 
-	.features_text {
-		width: auto;
-	}
+  .features_text {
+    width: auto;
+  }
 
-	.features_text h1 {
-		font-size: 2.5rem;
-		font-weight: 600;
-		line-height: 40px;
-	}
+  .features_text h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 40px;
+  }
 
-	.features_text p {
-		font-size: 1.5rem;
-		line-height: 30px;
-	}
+  .features_text p {
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
 
-	.features_img {
-		width: auto;
-		margin-y: 1rem;
-	}
+  .features_img {
+    width: auto;
+    margin-y: 1rem;
+  }
 
-	.faq_section {
-		padding: 5% 10%;
-		color: white;
-	}
+  .faq_section {
+    padding: 5% 10%;
+    color: white;
+  }
 
-	.faq_section h1 {
-		font-size: 2.5rem;
-		line-height: 40px;
-		font-weight: 600;
-	}
+  .faq_section h1 {
+    font-size: 2.5rem;
+    line-height: 40px;
+    font-weight: 600;
+  }
 
-	.faq_header h2 {
-		font-size: 1.5rem;
-		line-height: 40px;
-		font-weight: 500;
-	}
+  .faq_header h2 {
+    font-size: 1.5rem;
+    line-height: 40px;
+    font-weight: 500;
+  }
 
-	.faq_header span {
-		font-size: 1.5rem;
-		cursor: pointer;
-	}
+  .faq_header span {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
 
-	.faq_text {
-		background: grey;
-		padding: 2.5rem;
-	}
+  .faq_text {
+    background: grey;
+    padding: 2.5rem;
+  }
 
-	.faq_text p {
-		font-size: 1.5rem;
-		font-size: 500;
-		line-height: 35px;
-	}
+  .faq_text p {
+    font-size: 1.5rem;
+    font-size: 500;
+    line-height: 35px;
+  }
 }
 
 @media only screen and (max-width: 567px) {
-	.getStarted_section {
-		gap: 1rem;
-	}
+  .getStarted_section {
+    gap: 1rem;
+  }
 
-	.getStarted_section h1 {
-		font-size: 2.5rem;
-		line-height: 50px;
-	}
+  .getStarted_section h1 {
+    font-size: 2.5rem;
+    line-height: 50px;
+  }
 
-	.getStarted_section h3 {
-		font-size: 1.3rem;
-	}
+  .getStarted_section h3 {
+    font-size: 1.3rem;
+  }
 
-	.getStarted_section p {
-		font-size: 1rem;
-	}
+  .getStarted_section p {
+    font-size: 1rem;
+  }
 
-	.getStarted_input {
-		height: 50px;
-		width: 80%;
-	}
+  .getStarted_input {
+    height: 50px;
+    width: 80%;
+  }
 
-	.getStarted_input button {
-		font-size: 1rem;
-		width: 250px;
-	}
+  .getStarted_input button {
+    font-size: 1rem;
+    width: 250px;
+  }
 
-	.getStarted_input input::placeholder {
-		font-size: 0.9rem;
-	}
+  .getStarted_input input::placeholder {
+    font-size: 0.9rem;
+  }
 
-	.features_text h1 {
-		font-size: 2rem;
-	}
+  .features_text h1 {
+    font-size: 2rem;
+  }
 
-	.features_text p {
-		font-size: 1.2rem;
-	}
+  .features_text p {
+    font-size: 1.2rem;
+  }
 
-	.faq_section h1 {
-		font-size: 2rem;
-	}
+  .faq_section h1 {
+    font-size: 2rem;
+  }
 
-	.faq_header {
-		padding: 1rem;
-	}
+  .faq_header {
+    padding: 1rem;
+  }
 
-	.faq_header h2 {
-		font-size: 1.2rem;
-	}
+  .faq_header h2 {
+    font-size: 1.2rem;
+  }
 
-	.faq_header span {
-		font-size: 1.2rem;
-		cursor: pointer;
-	}
+  .faq_header span {
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
 
-	.faq_text {
-		background: grey;
-		padding: 2rem;
-	}
+  .faq_text {
+    background: grey;
+    padding: 2rem;
+  }
 
-	.faq_text p {
-		font-size: 1.2rem;
-	}
+  .faq_text p {
+    font-size: 1.2rem;
+  }
 }
 
 @media only screen and (max-width: 425px) {
-	.getStarted_section {
-		gap: 0.8rem;
-	}
+  .getStarted_section {
+    gap: 0.8rem;
+  }
 
-	.getStarted_section h1 {
-		font-size: 1.8rem;
-		line-height: 40px;
-	}
+  .getStarted_section h1 {
+    font-size: 1.8rem;
+    line-height: 40px;
+  }
 
-	.getStarted_section h3 {
-		font-size: 1.1rem;
-	}
+  .getStarted_section h3 {
+    font-size: 1.1rem;
+  }
 
-	.getStarted_section p {
-		font-size: 0.8rem;
-	}
+  .getStarted_section p {
+    font-size: 0.8rem;
+  }
 
-	.getStarted_input button {
-		font-size: 0.8rem;
-		width: 150px;
-	}
+  .getStarted_input button {
+    font-size: 0.8rem;
+    width: 150px;
+  }
 
-	.getStarted_input input::placeholder {
-		font-size: 0.7rem;
-	}
+  .getStarted_input input::placeholder {
+    font-size: 0.7rem;
+  }
 
-	.features_text h1 {
-		font-size: 2rem;
-	}
+  .features_text h1 {
+    font-size: 2rem;
+  }
 
-	.features_text p {
-		font-size: 1rem;
-		margin-top: 10px;
-	}
+  .features_text p {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
 
-	.faq_section h1 {
-		font-size: 1.8rem;
-	}
+  .faq_section h1 {
+    font-size: 1.8rem;
+  }
 
-	.faq_header h2 {
-		font-size: 1rem;
-		line-height: 30px;
-	}
+  .faq_header h2 {
+    font-size: 1rem;
+    line-height: 30px;
+  }
 
-	.faq_header span {
-		font-size: 1rem;
-		cursor: pointer;
-	}
+  .faq_header span {
+    font-size: 1rem;
+    cursor: pointer;
+  }
 
-	.faq_text {
-		background: grey;
-		padding: 1rem 1.5rem;
-	}
+  .faq_text {
+    background: grey;
+    padding: 1rem 1.5rem;
+  }
 
-	.faq_text p {
-		font-size: 0.8rem;
-		line-height: 25px;
-	}
+  .faq_text p {
+    font-size: 0.8rem;
+    line-height: 25px;
+  }
 }

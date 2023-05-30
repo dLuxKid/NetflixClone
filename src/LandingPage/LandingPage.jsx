@@ -4,6 +4,7 @@ import tv from "../assets/tv.png";
 import mobile from "../assets/mobile-0819.jpg";
 import kids from "../assets/kids.png";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const faqSection = [
   {
@@ -34,6 +35,7 @@ const faqSection = [
 
 const LandingPage = () => {
   const [icon, setIcon] = useState(null);
+  const navigate = useNavigate();
 
   return (
     <main>
@@ -49,7 +51,7 @@ const LandingPage = () => {
           </p>
           <div className="getStarted_input">
             <input type="text" placeholder="Email address" />
-            <button>Get Started</button>
+            <button onClick={() => navigate("/signin")}>Get Started</button>
           </div>
         </div>
       </section>

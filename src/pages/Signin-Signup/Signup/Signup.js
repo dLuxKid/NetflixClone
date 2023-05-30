@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import useForm from "../../../components/Form/Form";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import "../SignIn/SignIn.css";
@@ -10,10 +10,12 @@ import { authActions } from "../../../store/authSlice/authSlice";
 
 const Signup = () => {
   const [values, handleChange] = useForm();
+  const [pending, setPending] = useState(null);
   const Navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
+    setPending(true);
     e.preventDefault();
     createUserWithEmailAndPassword(
       auth,
@@ -29,12 +31,14 @@ const Signup = () => {
           phoneNumber: values.phonenumber,
         });
         dispatch(authActions.logIn(user));
+        setPending(null);
         Navigate("/");
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         alert(errorMessage, errorCode);
+        setPending(null);
       });
   };
 
@@ -88,9 +92,15 @@ const Signup = () => {
           />
         </div>
         <div>
-          <button onClick={handleSubmit} className="sign-btn" type="submit">
-            Sign Up
-          </button>
+          {pending ? (
+            <button disabled className="sign-btn">
+              Loading...
+            </button>
+          ) : (
+            <button onClick={handleSubmit} className="sign-btn" type="submit">
+              Log In
+            </button>
+          )}
           <span className="signup-signin-text">
             Already have an account?{" "}
             <Link
