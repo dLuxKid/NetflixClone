@@ -10,7 +10,6 @@ const authSlice = createSlice({
         email: action.payload.email,
         username: action.payload.displayName,
       };
-      console.log(state.user);
     },
     logOut(state) {
       state.user = null;
